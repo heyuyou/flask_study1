@@ -1,4 +1,4 @@
-from flask import Flask, url_for
+from flask import Flask, url_for, render_template
 
 app = Flask(__name__)
 
@@ -11,7 +11,12 @@ def hello_world():
 @app.route("/hello2/<name>")
 @app.route("/hello2")
 def hello2(name='he'):
-    return "hello %s" % name
+    movies = [
+        {"id": 1, "title": 'aaa'},
+        {"id": 2, "title": 'bbb'},
+        {"id": 3, "title": 'ccc'},
+    ]
+    return render_template("hello2.html", name=name,movies=movies)
 
 
 @app.route("/test")

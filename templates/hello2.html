@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+这是Hello2,
+this is var {{ name }} ,
+this is express:
+{% if name == 'hello' %}
+    <h1>name is hello</h1>
+{% else %}
+    <h1>name is not hello</h1>
+{% endif %}
+<hr/>
+{% for m in movies  %}
+    <div>
+    {{ m.id }} : {{ m.title }}
+    </div>
+{% endfor %}
+</body>
+</html>
