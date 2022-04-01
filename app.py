@@ -1,7 +1,7 @@
 from flask import Flask, url_for, render_template
 
 app = Flask(__name__)
-
+app.debug = True
 
 @app.route('/hello')
 def hello_world():
@@ -26,4 +26,5 @@ def test():
 
 
 if __name__ == '__main__':
+    print('h')
     app.run()
